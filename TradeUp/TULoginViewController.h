@@ -1,5 +1,5 @@
 //
-//  TUViewController.h
+//  TULoginViewController.h
 //  TradeUp
 //
 //  Created by Michelle Austria on 7/31/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TUViewController : UIViewController
+@interface TULoginViewController : UIViewController
 
 @end
