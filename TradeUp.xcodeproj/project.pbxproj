@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A7EB92A17A9A58F0036D8C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92917A9A58F0036D8C7 /* UIKit.framework */; };
+		0A7EB92C17A9A58F0036D8C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */; };
+		0A7EB92E17A9A58F0036D8C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92D17A9A58F0036D8C7 /* CoreGraphics.framework */; };
+		0A7EB93417A9A58F0036D8C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93217A9A58F0036D8C7 /* InfoPlist.strings */; };
+		0A7EB93617A9A58F0036D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB93517A9A58F0036D8C7 /* main.m */; };
+		0A7EB93A17A9A5900036D8C7 /* TUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */; };
+		0A7EB93C17A9A5900036D8C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93B17A9A5900036D8C7 /* Default.png */; };
+		0A7EB93E17A9A5900036D8C7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93D17A9A5900036D8C7 /* Default@2x.png */; };
+		0A7EB94017A9A5900036D8C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93F17A9A5900036D8C7 /* Default-568h@2x.png */; };
+		0A7EB94317A9A5900036D8C7 /* TUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB94217A9A5900036D8C7 /* TUViewController.m */; };
+		0A7EB94617A9A5900036D8C7 /* TUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB94417A9A5900036D8C7 /* TUViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A7EB92617A9A58F0036D8C7 /* TradeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A7EB92917A9A58F0036D8C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A7EB92D17A9A58F0036D8C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A7EB93117A9A58F0036D8C7 /* TradeUp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TradeUp-Info.plist"; sourceTree = "<group>"; };
+		0A7EB93317A9A58F0036D8C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A7EB93517A9A58F0036D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A7EB93717A9A5900036D8C7 /* TradeUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TradeUp-Prefix.pch"; sourceTree = "<group>"; };
+		0A7EB93817A9A5900036D8C7 /* TUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUAppDelegate.h; sourceTree = "<group>"; };
+		0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUAppDelegate.m; sourceTree = "<group>"; };
+		0A7EB93B17A9A5900036D8C7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0A7EB93D17A9A5900036D8C7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0A7EB93F17A9A5900036D8C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0A7EB94117A9A5900036D8C7 /* TUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUViewController.h; sourceTree = "<group>"; };
+		0A7EB94217A9A5900036D8C7 /* TUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUViewController.m; sourceTree = "<group>"; };
+		0A7EB94517A9A5900036D8C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TUViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A7EB92317A9A58E0036D8C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7EB92A17A9A58F0036D8C7 /* UIKit.framework in Frameworks */,
+				0A7EB92C17A9A58F0036D8C7 /* Foundation.framework in Frameworks */,
+				0A7EB92E17A9A58F0036D8C7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A7EB91D17A9A58E0036D8C7 = {
+			isa = PBXGroup;
+			children = (
+				0A7EB92F17A9A58F0036D8C7 /* TradeUp */,
+				0A7EB92817A9A58F0036D8C7 /* Frameworks */,
+				0A7EB92717A9A58F0036D8C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A7EB92717A9A58F0036D8C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB92617A9A58F0036D8C7 /* TradeUp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A7EB92817A9A58F0036D8C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB92917A9A58F0036D8C7 /* UIKit.framework */,
+				0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */,
+				0A7EB92D17A9A58F0036D8C7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A7EB92F17A9A58F0036D8C7 /* TradeUp */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB93817A9A5900036D8C7 /* TUAppDelegate.h */,
+				0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */,
+				0A7EB94117A9A5900036D8C7 /* TUViewController.h */,
+				0A7EB94217A9A5900036D8C7 /* TUViewController.m */,
+				0A7EB94417A9A5900036D8C7 /* TUViewController.xib */,
+				0A7EB93017A9A58F0036D8C7 /* Supporting Files */,
+			);
+			path = TradeUp;
+			sourceTree = "<group>";
+		};
+		0A7EB93017A9A58F0036D8C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB93117A9A58F0036D8C7 /* TradeUp-Info.plist */,
+				0A7EB93217A9A58F0036D8C7 /* InfoPlist.strings */,
+				0A7EB93517A9A58F0036D8C7 /* main.m */,
+				0A7EB93717A9A5900036D8C7 /* TradeUp-Prefix.pch */,
+				0A7EB93B17A9A5900036D8C7 /* Default.png */,
+				0A7EB93D17A9A5900036D8C7 /* Default@2x.png */,
+				0A7EB93F17A9A5900036D8C7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A7EB92517A9A58E0036D8C7 /* TradeUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A7EB94917A9A5900036D8C7 /* Build configuration list for PBXNativeTarget "TradeUp" */;
+			buildPhases = (
+				0A7EB92217A9A58E0036D8C7 /* Sources */,
+				0A7EB92317A9A58E0036D8C7 /* Frameworks */,
+				0A7EB92417A9A58E0036D8C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradeUp;
+			productName = TradeUp;
+			productReference = 0A7EB92617A9A58F0036D8C7 /* TradeUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A7EB91E17A9A58E0036D8C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TU;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Michelle Austria";
+			};
+			buildConfigurationList = 0A7EB92117A9A58E0036D8C7 /* Build configuration list for PBXProject "TradeUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A7EB91D17A9A58E0036D8C7;
+			productRefGroup = 0A7EB92717A9A58F0036D8C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A7EB92517A9A58E0036D8C7 /* TradeUp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A7EB92417A9A58E0036D8C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7EB93417A9A58F0036D8C7 /* InfoPlist.strings in Resources */,
+				0A7EB93C17A9A5900036D8C7 /* Default.png in Resources */,
+				0A7EB93E17A9A5900036D8C7 /* Default@2x.png in Resources */,
+				0A7EB94017A9A5900036D8C7 /* Default-568h@2x.png in Resources */,
+				0A7EB94617A9A5900036D8C7 /* TUViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A7EB92217A9A58E0036D8C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7EB93617A9A58F0036D8C7 /* main.m in Sources */,
+				0A7EB93A17A9A5900036D8C7 /* TUAppDelegate.m in Sources */,
+				0A7EB94317A9A5900036D8C7 /* TUViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A7EB93217A9A58F0036D8C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A7EB93317A9A58F0036D8C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0A7EB94417A9A5900036D8C7 /* TUViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A7EB94517A9A5900036D8C7 /* en */,
+			);
+			name = TUViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A7EB94717A9A5900036D8C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A7EB94817A9A5900036D8C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A7EB94A17A9A5900036D8C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TradeUp/TradeUp-Prefix.pch";
+				INFOPLIST_FILE = "TradeUp/TradeUp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A7EB94B17A9A5900036D8C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TradeUp/TradeUp-Prefix.pch";
+				INFOPLIST_FILE = "TradeUp/TradeUp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A7EB92117A9A58E0036D8C7 /* Build configuration list for PBXProject "TradeUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A7EB94717A9A5900036D8C7 /* Debug */,
+				0A7EB94817A9A5900036D8C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A7EB94917A9A5900036D8C7 /* Build configuration list for PBXNativeTarget "TradeUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A7EB94A17A9A5900036D8C7 /* Debug */,
+				0A7EB94B17A9A5900036D8C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A7EB91E17A9A58E0036D8C7 /* Project object */;
+}
