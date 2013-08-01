@@ -60,6 +60,7 @@
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
     NSString *result = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
     NSLog(@"Response: %@", result);
+    
 }
 
 

@@ -86,7 +86,6 @@
             skillObject.tableViewName = descriptiveTestName;
             skillObject.tableViewIDName = descriptiveTestID;
 
-            NSLog(@"NAME: %@", skillObject.name);
             [self.availableSkills addObject:skillObject];
         }
         
