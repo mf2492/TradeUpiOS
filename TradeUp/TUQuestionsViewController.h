@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TULoginViewController.h"
 
-@interface TUQuestionsViewController : UIViewController
+@interface TUQuestionsViewController : UIViewController {
+    TULoginViewController *token;
+}
 
 @end

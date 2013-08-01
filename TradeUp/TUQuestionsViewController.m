@@ -14,6 +14,7 @@
 
 @implementation TUQuestionsViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,6 +41,33 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/assessments/:assessment-name.json"]];
+    [request setHTTPMethod:@"POST"];
+    /*
+    NSString *post = [NSString stringWithFormat:@"auth_token=%@", ]];
+    NSLog(@"POST: %@",post);
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    
+    //get response
+    NSHTTPURLResponse* urlResponse = nil;
+    NSError *error = [[NSError alloc] init];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response Code: %d", [urlResponse statusCode]);
+    
+    if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
+    {
+        NSLog(@"Response: %@", result);
+        
+    }
+*/
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
