@@ -64,26 +64,26 @@
     NSError *jsonParsingError = nil;
     NSArray *skillSet = [NSJSONSerialization JSONObjectWithData:response options:0 error:&jsonParsingError];
     NSDictionary *skills;
-    NSString *categoryString;
+    
     for (int i = 0; i <[skillSet count]; i++) {
         skills = [skillSet objectAtIndex:i];
-        categoryString=[[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"assessment"];
+        NSString *categoryString=[[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"assessment"];
         
         if (![categoryString isEqual:[NSNull null]]) {
             //NSLog(@"%@", categoryString);
             NSString *testName = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"name"];
-            NSLog(@"NAME %@", testName);
+            NSString *testID = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"id"];
+            Skills *skillObject = [[Skills alloc] init];
+            //NSLog(@"NAME %@", testName);
+            skillObject.name = testName;
+            skillObject.id_num = testID;
             
-            
-            [self.availableSkills addObject:testName];
+            [self.availableSkills addObject:skillObject];
         }
         
     }
-    NSLog(@"%@", self.availableSkills);
-
-    
-    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -121,11 +121,13 @@
     //since our passwords array contains a list of QCAccount Objects we can index into our array and set the value equal to a local variable we will call account.
     Skills *skill_set =[self.availableSkills objectAtIndex:indexPath.row];
     
-    //cell.textLabel.text = skill_set.name;
+    cell.textLabel.text = skill_set.name;
         
     
     return cell;
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.
