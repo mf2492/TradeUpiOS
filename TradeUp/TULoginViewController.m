@@ -23,7 +23,6 @@
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] init];
         backButton.title = @"Cancel";
         self.navigationItem.backBarButtonItem = backButton;
-        
     }
     return self;
 }
@@ -33,11 +32,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.credentials.hidden = YES;
+
     self.usernameTextField.delegate = self;
     self.passwordTextField.delegate = self;
     
     }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -45,6 +46,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ Hides top navigation bar
+ */
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
@@ -67,39 +71,6 @@
 }
 
 
--(void) loginUser {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/tokens.json?"]];
-    [request setHTTPMethod:@"POST"];
-    
-    NSString *post = [NSString stringWithFormat:@"email=%@&password=%@", self.usernameTextField.text, self.passwordTextField.text];
-    NSLog(@"%@",post);
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    
-    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
-    
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-     [request setHTTPBody:postData];
-    
-    
-    
-     //get response
-     NSHTTPURLResponse* urlResponse = nil;
-     NSError *error = [[NSError alloc] init];
-     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-     NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-     NSLog(@"Response Code: %d", [urlResponse statusCode]);
-    
-    
-    
-    
-     if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
-     {
-     NSLog(@"Response: %@", result);
-     }
-}
-
-
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
 
@@ -107,35 +78,8 @@
     NSString *password = self.passwordTextField.text;
     NSLog(@"%@", email);
     NSLog(@"%@", password);
+    [self loginUser:email with:password];
     
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/tokens.json"]];
-    [request setHTTPMethod:@"POST"];
-    
-    NSString *post = [NSString stringWithFormat:@"email=%@&password=%@", self.usernameTextField.text, self.passwordTextField.text];
-    NSLog(@"POST: %@",post);
-    
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
-    
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-    [request setHTTPBody:postData];
-    
-    
-    
-    //get response
-    NSHTTPURLResponse* urlResponse = nil;
-    NSError *error = [[NSError alloc] init];
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSLog(@"Response Code: %d", [urlResponse statusCode]);
-
-    
-    if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
-    {
-        NSLog(@"Response: %@", result);
-    }
 
 }
 
@@ -143,4 +87,36 @@
     TUSignUpViewController *signUpVC = [[TUSignUpViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:signUpVC animated:YES];
 }
+
+
+
+- (void)loginUser:(NSString *)email with:(NSString *)password {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/tokens.json"]];
+    [request setHTTPMethod:@"POST"];
+    NSString *post = [NSString stringWithFormat:@"email=%@&password=%@", email, password];
+    NSLog(@"POST: %@",post);
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    
+    //get response
+    NSHTTPURLResponse* urlResponse = nil;
+    NSError *error = [[NSError alloc] init];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response Code: %d", [urlResponse statusCode]);
+    
+    if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
+    {
+        NSLog(@"Response: %@", result);
+    } else {
+        self.credentials.hidden = NO;
+    }
+}
+
+
+
 @end

@@ -13,9 +13,12 @@
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet UILabel *credentials;
 
 - (IBAction)loginButtonPressed:(UIButton *)sender;
 
 - (IBAction)createAccountPressed:(UIButton *)sender;
+
+- (void)loginUser:(NSString *)email with: (NSString *)password;
 
 @end
