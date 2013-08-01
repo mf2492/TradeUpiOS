@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface TUSignUpViewController : UIViewController
+<UITextFieldDelegate>
+
+- (IBAction)signUpButtonPressed:(UIButton *)sender;
+- (BOOL) passwordConfirmed:(NSString *)first with: (NSString *)second;
+
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
+
+@property (strong, nonatomic) IBOutlet UILabel *passwordMatch;
 
 @end

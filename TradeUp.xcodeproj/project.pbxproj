@@ -13,11 +13,18 @@
 		0A7EB93417A9A58F0036D8C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93217A9A58F0036D8C7 /* InfoPlist.strings */; };
 		0A7EB93617A9A58F0036D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB93517A9A58F0036D8C7 /* main.m */; };
 		0A7EB93A17A9A5900036D8C7 /* TUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */; };
-		0A7EB93C17A9A5900036D8C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93B17A9A5900036D8C7 /* Default.png */; };
-		0A7EB93E17A9A5900036D8C7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93D17A9A5900036D8C7 /* Default@2x.png */; };
-		0A7EB94017A9A5900036D8C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB93F17A9A5900036D8C7 /* Default-568h@2x.png */; };
-		0A7EB94317A9A5900036D8C7 /* TUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB94217A9A5900036D8C7 /* TUViewController.m */; };
-		0A7EB94617A9A5900036D8C7 /* TUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB94417A9A5900036D8C7 /* TUViewController.xib */; };
+		0A7EB95417A9ACB20036D8C7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB95317A9ACB20036D8C7 /* icon.png */; };
+		0A7EB95617A9AE160036D8C7 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB95517A9AE160036D8C7 /* icon@2x.png */; };
+		0A7EB95817A9AE250036D8C7 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB95717A9AE250036D8C7 /* icon@2x.png */; };
+		0A7EB95A17A9AE9D0036D8C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB95917A9AE9D0036D8C7 /* Default.png */; };
+		0A7EB95E17A9AFB70036D8C7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB95D17A9AFB70036D8C7 /* Default@2x.png */; };
+		0A7EB96017A9B0380036D8C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB95F17A9B0380036D8C7 /* Default-568h@2x.png */; };
+		0A7EB96517A9B1CE0036D8C7 /* TULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB96317A9B1CE0036D8C7 /* TULoginViewController.m */; };
+		0A7EB96617A9B1CE0036D8C7 /* TULoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB96417A9B1CE0036D8C7 /* TULoginViewController.xib */; };
+		0A7EB96A17A9B4F70036D8C7 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB96817A9B4F70036D8C7 /* logo@2x.png */; };
+		0A7EB96E17A9B7140036D8C7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB96D17A9B7130036D8C7 /* logo.png */; };
+		0A7EB97417A9E58B0036D8C7 /* TUSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB97217A9E5890036D8C7 /* TUSignUpViewController.m */; };
+		0A7EB97517A9E58B0036D8C7 /* TUSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB97317A9E58A0036D8C7 /* TUSignUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +38,20 @@
 		0A7EB93717A9A5900036D8C7 /* TradeUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TradeUp-Prefix.pch"; sourceTree = "<group>"; };
 		0A7EB93817A9A5900036D8C7 /* TUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUAppDelegate.h; sourceTree = "<group>"; };
 		0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUAppDelegate.m; sourceTree = "<group>"; };
-		0A7EB93B17A9A5900036D8C7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0A7EB93D17A9A5900036D8C7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		0A7EB93F17A9A5900036D8C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		0A7EB94117A9A5900036D8C7 /* TUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUViewController.h; sourceTree = "<group>"; };
-		0A7EB94217A9A5900036D8C7 /* TUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUViewController.m; sourceTree = "<group>"; };
-		0A7EB94517A9A5900036D8C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TUViewController.xib; sourceTree = "<group>"; };
+		0A7EB95317A9ACB20036D8C7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		0A7EB95517A9AE160036D8C7 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Images/icon@2x.png"; sourceTree = "<group>"; };
+		0A7EB95717A9AE250036D8C7 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		0A7EB95917A9AE9D0036D8C7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Images/Default.png; sourceTree = SOURCE_ROOT; };
+		0A7EB95D17A9AFB70036D8C7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0A7EB95F17A9B0380036D8C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0A7EB96217A9B1CE0036D8C7 /* TULoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TULoginViewController.h; sourceTree = "<group>"; };
+		0A7EB96317A9B1CE0036D8C7 /* TULoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TULoginViewController.m; sourceTree = "<group>"; };
+		0A7EB96417A9B1CE0036D8C7 /* TULoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TULoginViewController.xib; sourceTree = "<group>"; };
+		0A7EB96817A9B4F70036D8C7 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		0A7EB96D17A9B7130036D8C7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0A7EB97117A9E5880036D8C7 /* TUSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSignUpViewController.h; sourceTree = "<group>"; };
+		0A7EB97217A9E5890036D8C7 /* TUSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSignUpViewController.m; sourceTree = "<group>"; };
+		0A7EB97317A9E58A0036D8C7 /* TUSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUSignUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,9 @@
 		0A7EB91D17A9A58E0036D8C7 = {
 			isa = PBXGroup;
 			children = (
+				0A7EB95717A9AE250036D8C7 /* icon@2x.png */,
+				0A7EB95317A9ACB20036D8C7 /* icon.png */,
+				0A7EB95517A9AE160036D8C7 /* icon@2x.png */,
 				0A7EB92F17A9A58F0036D8C7 /* TradeUp */,
 				0A7EB92817A9A58F0036D8C7 /* Frameworks */,
 				0A7EB92717A9A58F0036D8C7 /* Products */,
@@ -83,11 +101,9 @@
 		0A7EB92F17A9A58F0036D8C7 /* TradeUp */ = {
 			isa = PBXGroup;
 			children = (
-				0A7EB93817A9A5900036D8C7 /* TUAppDelegate.h */,
-				0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */,
-				0A7EB94117A9A5900036D8C7 /* TUViewController.h */,
-				0A7EB94217A9A5900036D8C7 /* TUViewController.m */,
-				0A7EB94417A9A5900036D8C7 /* TUViewController.xib */,
+				0A7EB96117A9B18A0036D8C7 /* Initialization */,
+				0A7EB96F17A9BEB30036D8C7 /* Skills */,
+				0A7EB97017A9BEBB0036D8C7 /* Questions */,
 				0A7EB93017A9A58F0036D8C7 /* Supporting Files */,
 			);
 			path = TradeUp;
@@ -97,14 +113,53 @@
 			isa = PBXGroup;
 			children = (
 				0A7EB93117A9A58F0036D8C7 /* TradeUp-Info.plist */,
+				0A7EB94C17A9A66E0036D8C7 /* Images */,
 				0A7EB93217A9A58F0036D8C7 /* InfoPlist.strings */,
 				0A7EB93517A9A58F0036D8C7 /* main.m */,
 				0A7EB93717A9A5900036D8C7 /* TradeUp-Prefix.pch */,
-				0A7EB93B17A9A5900036D8C7 /* Default.png */,
-				0A7EB93D17A9A5900036D8C7 /* Default@2x.png */,
-				0A7EB93F17A9A5900036D8C7 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A7EB94C17A9A66E0036D8C7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB96D17A9B7130036D8C7 /* logo.png */,
+				0A7EB96817A9B4F70036D8C7 /* logo@2x.png */,
+				0A7EB95917A9AE9D0036D8C7 /* Default.png */,
+				0A7EB95D17A9AFB70036D8C7 /* Default@2x.png */,
+				0A7EB95F17A9B0380036D8C7 /* Default-568h@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0A7EB96117A9B18A0036D8C7 /* Initialization */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB93817A9A5900036D8C7 /* TUAppDelegate.h */,
+				0A7EB93917A9A5900036D8C7 /* TUAppDelegate.m */,
+				0A7EB96217A9B1CE0036D8C7 /* TULoginViewController.h */,
+				0A7EB96317A9B1CE0036D8C7 /* TULoginViewController.m */,
+				0A7EB96417A9B1CE0036D8C7 /* TULoginViewController.xib */,
+				0A7EB97117A9E5880036D8C7 /* TUSignUpViewController.h */,
+				0A7EB97217A9E5890036D8C7 /* TUSignUpViewController.m */,
+				0A7EB97317A9E58A0036D8C7 /* TUSignUpViewController.xib */,
+			);
+			name = Initialization;
+			sourceTree = "<group>";
+		};
+		0A7EB96F17A9BEB30036D8C7 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Skills;
+			sourceTree = "<group>";
+		};
+		0A7EB97017A9BEBB0036D8C7 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Questions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +215,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A7EB93417A9A58F0036D8C7 /* InfoPlist.strings in Resources */,
-				0A7EB93C17A9A5900036D8C7 /* Default.png in Resources */,
-				0A7EB93E17A9A5900036D8C7 /* Default@2x.png in Resources */,
-				0A7EB94017A9A5900036D8C7 /* Default-568h@2x.png in Resources */,
-				0A7EB94617A9A5900036D8C7 /* TUViewController.xib in Resources */,
+				0A7EB95417A9ACB20036D8C7 /* icon.png in Resources */,
+				0A7EB95617A9AE160036D8C7 /* icon@2x.png in Resources */,
+				0A7EB95817A9AE250036D8C7 /* icon@2x.png in Resources */,
+				0A7EB95A17A9AE9D0036D8C7 /* Default.png in Resources */,
+				0A7EB95E17A9AFB70036D8C7 /* Default@2x.png in Resources */,
+				0A7EB96017A9B0380036D8C7 /* Default-568h@2x.png in Resources */,
+				0A7EB96617A9B1CE0036D8C7 /* TULoginViewController.xib in Resources */,
+				0A7EB96A17A9B4F70036D8C7 /* logo@2x.png in Resources */,
+				0A7EB96E17A9B7140036D8C7 /* logo.png in Resources */,
+				0A7EB97517A9E58B0036D8C7 /* TUSignUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +237,8 @@
 			files = (
 				0A7EB93617A9A58F0036D8C7 /* main.m in Sources */,
 				0A7EB93A17A9A5900036D8C7 /* TUAppDelegate.m in Sources */,
-				0A7EB94317A9A5900036D8C7 /* TUViewController.m in Sources */,
+				0A7EB96517A9B1CE0036D8C7 /* TULoginViewController.m in Sources */,
+				0A7EB97417A9E58B0036D8C7 /* TUSignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +251,6 @@
 				0A7EB93317A9A58F0036D8C7 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0A7EB94417A9A5900036D8C7 /* TUViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A7EB94517A9A5900036D8C7 /* en */,
-			);
-			name = TUViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

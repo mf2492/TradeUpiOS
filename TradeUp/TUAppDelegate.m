@@ -8,7 +8,7 @@
 
 #import "TUAppDelegate.h"
 
-#import "TUViewController.h"
+#import "TULoginViewController.h"
 
 @implementation TUAppDelegate
 
@@ -16,8 +16,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[TUViewController alloc] initWithNibName:@"TUViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+
+    TULoginViewController *loginVC = [[TULoginViewController alloc] initWithNibName:nil bundle:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
