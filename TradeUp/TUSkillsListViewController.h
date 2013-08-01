@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSMutableArray *availableSkills;
 @property (strong, nonatomic) NSString *auth_token;
+@property (strong, nonatomic) NSString *description;
+
 
 
 @end

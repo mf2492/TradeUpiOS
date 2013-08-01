@@ -43,35 +43,26 @@
     // Do any additional setup after loading the view from its nib.
     
     NSLog(@"AUTHL %@", self.auth_token_question);
-/*
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/assessments/:assessment-name.json"]];
-    [request setHTTPMethod:@"POST"];
+    NSLog(@"NAME: %@", self.testName);
     
-    NSString *post = [NSString stringWithFormat:@"auth_token=%@", ]];
-    NSLog(@"POST: %@",post);
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    NSString *url = [[[@"http://tradeup-staging.herokuapp.com/api/v1/assessments/" stringByAppendingString:self.testName] stringByAppendingString:@".json?auth_token="] stringByAppendingString:self.auth_token_question];
     
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-    [request setHTTPBody:postData];
+    NSLog(@"URL: %@", url);
     
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                       timeoutInterval:10];
+    [request setHTTPMethod: @"GET"];
+    
+    NSError *requestError;
+    NSURLResponse *urlResponse = nil;
     //get response
-    NSHTTPURLResponse* urlResponse = nil;
-    NSError *error = [[NSError alloc] init];
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSLog(@"Response Code: %d", [urlResponse statusCode]);
-    
-    if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
-    {
-        NSLog(@"Response: %@", result);
-        
-    }
-*/
-    
-    
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+    NSString *result = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSLog(@"Response: %@", result);
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

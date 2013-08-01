@@ -14,5 +14,7 @@
 }
 
 @property (strong, nonatomic) NSString *auth_token_question;
+@property (strong, nonatomic) NSString *testName;
+
 
 @end

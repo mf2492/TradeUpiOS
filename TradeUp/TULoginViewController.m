@@ -76,10 +76,13 @@
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
 
-    NSString *email = self.usernameTextField.text;
-    NSString *password = self.passwordTextField.text;
-    NSLog(@"%@", email);
-    NSLog(@"%@", password);
+    //CHANGE BACK FOR DEPLOYMENT
+   // NSString *email = self.usernameTextField.text;
+   // NSString *password = self.passwordTextField.text;
+    NSString *email = @"michelle@dreamitventures.com";
+    NSString *password = @"password123";
+    //NSLog(@"%@", email);
+    //NSLog(@"%@", password);
     [self loginUser:email with:password];
     
 

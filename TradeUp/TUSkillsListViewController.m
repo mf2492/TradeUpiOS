@@ -38,7 +38,6 @@
     [super viewDidLoad];
     [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@"banner"] forBarMetrics:UIBarMetricsDefault];
 
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -73,13 +72,21 @@
         
         if (![categoryString isEqual:[NSNull null]]) {
             //NSLog(@"%@", categoryString);
-            NSString *testName = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"name"];
-            NSString *testID = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"id"];
+            NSString *descriptiveTestName = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"name"];
+            NSString *descriptiveTestID = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"id"];
+
+            NSString *assessmentName = [categoryString valueForKey:@"name"];
+            assessmentName = [assessmentName stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+            NSString *assessmentID = [categoryString valueForKey:@"id"];
+            
             Skills *skillObject = [[Skills alloc] init];
             //NSLog(@"NAME %@", testName);
-            skillObject.name = testName;
-            skillObject.id_num = testID;
-            
+            skillObject.name = assessmentName;
+            skillObject.id_num = assessmentID;
+            skillObject.tableViewName = descriptiveTestName;
+            skillObject.tableViewIDName = descriptiveTestID;
+
+            NSLog(@"NAME: %@", skillObject.name);
             [self.availableSkills addObject:skillObject];
         }
         
@@ -95,11 +102,13 @@
 
 #pragma mark - Table view data source
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
     return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -107,14 +116,12 @@
     return self.availableSkills.count;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-    
     Skills *skill_set =[self.availableSkills objectAtIndex:indexPath.row];
-    
     cell.textLabel.text = skill_set.name;
-    
     return cell;
 }
 
@@ -163,8 +170,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellText = selectedCell.textLabel.text;    
     TUQuestionsViewController *questionsVC = [[TUQuestionsViewController alloc] initWithNibName:nil bundle:nil];
     questionsVC.auth_token_question = self.auth_token;
+    questionsVC.testName = cellText;
     [self.navigationController pushViewController:questionsVC animated:YES];
     
 }

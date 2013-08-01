@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *id_num;
+@property (strong, nonatomic) NSString *tableViewName;
+@property (strong, nonatomic) NSString *tableViewIDName;
 
 @end
