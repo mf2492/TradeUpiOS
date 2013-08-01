@@ -7,6 +7,7 @@
 //
 
 #import "TUSignUpViewController.h"
+#import "TUSkillsListViewController.h"
 
 @interface TUSignUpViewController ()
 
@@ -28,6 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
     self.nameTextField.delegate = self;
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
@@ -93,7 +95,9 @@
     if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
     {
         NSLog(@"Response: %@", result);
-        //ADD CODE TO GO TO SKILLS
+        TUSkillsListViewController *skillsVC = [[TUSkillsListViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:skillsVC animated:YES];
+
     }
     
 

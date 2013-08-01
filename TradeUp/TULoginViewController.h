@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UILabel *credentials;
 
+- (void) postToken:(NSString *)token;
+
 - (IBAction)loginButtonPressed:(UIButton *)sender;
 
 - (IBAction)createAccountPressed:(UIButton *)sender;

@@ -25,8 +25,11 @@
 		0A7EB96E17A9B7140036D8C7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB96D17A9B7130036D8C7 /* logo.png */; };
 		0A7EB97417A9E58B0036D8C7 /* TUSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB97217A9E5890036D8C7 /* TUSignUpViewController.m */; };
 		0A7EB97517A9E58B0036D8C7 /* TUSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB97317A9E58A0036D8C7 /* TUSignUpViewController.xib */; };
-		0A7EB97A17AA0DEE0036D8C7 /* TUSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB97817AA0DEE0036D8C7 /* TUSkillsViewController.m */; };
-		0A7EB97B17AA0DEE0036D8C7 /* TUSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB97917AA0DEE0036D8C7 /* TUSkillsViewController.xib */; };
+		0A7EB98917AAD5050036D8C7 /* TUSkillsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB98717AAD5050036D8C7 /* TUSkillsListViewController.m */; };
+		0A7EB98A17AAD5050036D8C7 /* TUSkillsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB98817AAD5050036D8C7 /* TUSkillsListViewController.xib */; };
+		0A7EB99117AAD6B50036D8C7 /* Skills.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB99017AAD6B50036D8C7 /* Skills.m */; };
+		0A7EB99517AAD7E50036D8C7 /* TUQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB99317AAD7E50036D8C7 /* TUQuestionsViewController.m */; };
+		0A7EB99617AAD7E50036D8C7 /* TUQuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB99417AAD7E50036D8C7 /* TUQuestionsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +57,14 @@
 		0A7EB97117A9E5880036D8C7 /* TUSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSignUpViewController.h; sourceTree = "<group>"; };
 		0A7EB97217A9E5890036D8C7 /* TUSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSignUpViewController.m; sourceTree = "<group>"; };
 		0A7EB97317A9E58A0036D8C7 /* TUSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUSignUpViewController.xib; sourceTree = "<group>"; };
-		0A7EB97717AA0DEE0036D8C7 /* TUSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSkillsViewController.h; sourceTree = "<group>"; };
-		0A7EB97817AA0DEE0036D8C7 /* TUSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSkillsViewController.m; sourceTree = "<group>"; };
-		0A7EB97917AA0DEE0036D8C7 /* TUSkillsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUSkillsViewController.xib; sourceTree = "<group>"; };
+		0A7EB98617AAD5050036D8C7 /* TUSkillsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSkillsListViewController.h; sourceTree = "<group>"; };
+		0A7EB98717AAD5050036D8C7 /* TUSkillsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSkillsListViewController.m; sourceTree = "<group>"; };
+		0A7EB98817AAD5050036D8C7 /* TUSkillsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUSkillsListViewController.xib; sourceTree = "<group>"; };
+		0A7EB98F17AAD6B50036D8C7 /* Skills.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skills.h; path = ../Skills.h; sourceTree = "<group>"; };
+		0A7EB99017AAD6B50036D8C7 /* Skills.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Skills.m; path = ../Skills.m; sourceTree = "<group>"; };
+		0A7EB99217AAD7E50036D8C7 /* TUQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUQuestionsViewController.h; sourceTree = "<group>"; };
+		0A7EB99317AAD7E50036D8C7 /* TUQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUQuestionsViewController.m; sourceTree = "<group>"; };
+		0A7EB99417AAD7E50036D8C7 /* TUQuestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUQuestionsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 				0A7EB97617AA08400036D8C7 /* Login */,
 				0A7EB96F17A9BEB30036D8C7 /* Skills */,
 				0A7EB97017A9BEBB0036D8C7 /* Questions */,
+				0A7EB98E17AAD6500036D8C7 /* Models */,
 				0A7EB93017A9A58F0036D8C7 /* Supporting Files */,
 			);
 			path = TradeUp;
@@ -151,9 +160,9 @@
 		0A7EB96F17A9BEB30036D8C7 /* Skills */ = {
 			isa = PBXGroup;
 			children = (
-				0A7EB97717AA0DEE0036D8C7 /* TUSkillsViewController.h */,
-				0A7EB97817AA0DEE0036D8C7 /* TUSkillsViewController.m */,
-				0A7EB97917AA0DEE0036D8C7 /* TUSkillsViewController.xib */,
+				0A7EB98617AAD5050036D8C7 /* TUSkillsListViewController.h */,
+				0A7EB98717AAD5050036D8C7 /* TUSkillsListViewController.m */,
+				0A7EB98817AAD5050036D8C7 /* TUSkillsListViewController.xib */,
 			);
 			name = Skills;
 			sourceTree = "<group>";
@@ -161,6 +170,9 @@
 		0A7EB97017A9BEBB0036D8C7 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				0A7EB99217AAD7E50036D8C7 /* TUQuestionsViewController.h */,
+				0A7EB99317AAD7E50036D8C7 /* TUQuestionsViewController.m */,
+				0A7EB99417AAD7E50036D8C7 /* TUQuestionsViewController.xib */,
 			);
 			name = Questions;
 			sourceTree = "<group>";
@@ -176,6 +188,15 @@
 				0A7EB97317A9E58A0036D8C7 /* TUSignUpViewController.xib */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		0A7EB98E17AAD6500036D8C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A7EB98F17AAD6B50036D8C7 /* Skills.h */,
+				0A7EB99017AAD6B50036D8C7 /* Skills.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +262,8 @@
 				0A7EB96A17A9B4F70036D8C7 /* logo@2x.png in Resources */,
 				0A7EB96E17A9B7140036D8C7 /* logo.png in Resources */,
 				0A7EB97517A9E58B0036D8C7 /* TUSignUpViewController.xib in Resources */,
-				0A7EB97B17AA0DEE0036D8C7 /* TUSkillsViewController.xib in Resources */,
+				0A7EB98A17AAD5050036D8C7 /* TUSkillsListViewController.xib in Resources */,
+				0A7EB99617AAD7E50036D8C7 /* TUQuestionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +278,9 @@
 				0A7EB93A17A9A5900036D8C7 /* TUAppDelegate.m in Sources */,
 				0A7EB96517A9B1CE0036D8C7 /* TULoginViewController.m in Sources */,
 				0A7EB97417A9E58B0036D8C7 /* TUSignUpViewController.m in Sources */,
-				0A7EB97A17AA0DEE0036D8C7 /* TUSkillsViewController.m in Sources */,
+				0A7EB98917AAD5050036D8C7 /* TUSkillsListViewController.m in Sources */,
+				0A7EB99117AAD6B50036D8C7 /* Skills.m in Sources */,
+				0A7EB99517AAD7E50036D8C7 /* TUQuestionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TUSkillsListViewController : UITableViewController
+@interface TUSkillsListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *skillsListTableView;
+
+
+@property (strong, nonatomic) NSMutableArray *availableSkills;
 
 @end

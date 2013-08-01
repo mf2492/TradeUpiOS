@@ -19,6 +19,7 @@
 
 - (void) userSignUp:(NSString *)name withEmail: (NSString *)email withPassword: (NSString *)password withConfirmation:(NSString *)confirm;
 
+
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;

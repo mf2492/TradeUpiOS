@@ -8,7 +8,7 @@
 
 #import "TULoginViewController.h"
 #import "TUSignUpViewController.h"
-#import "TUSkillsViewController.h"
+#import "TUSkillsListViewController.h"
 
 @interface TULoginViewController ()
 
@@ -107,18 +107,62 @@
     NSHTTPURLResponse* urlResponse = nil;
     NSError *error = [[NSError alloc] init];
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+
+
+    
+    //NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSLog(@"Response Code: %d", [urlResponse statusCode]);
     
     if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
     {
-        NSLog(@"Response: %@", result);
-        TUSkillsViewController *skillsVC = [[TUSkillsViewController alloc] initWithNibName:nil bundle:nil];
+        NSDictionary* json = [NSJSONSerialization
+                              JSONObjectWithData:responseData //1
+                              
+                              options:kNilOptions
+                              error:&error];
+        
+        NSString* userToken = [json objectForKey:@"token"]; //2
+        [self postToken:userToken];
+
+        
+        TUSkillsListViewController *skillsVC = [[TUSkillsListViewController alloc] initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:skillsVC animated:YES];
 
     } else {
         self.credentials.hidden = NO;
     }
+}
+
+- (void)postToken:(NSString *)token {
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/"]];
+    [request setHTTPMethod:@"POST"];
+    NSString *post = [NSString stringWithFormat:@"auth_token=%@", token];
+    NSLog(@"POST: %@",post);
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    
+    //get response
+    /*
+    NSHTTPURLResponse* urlResponse = nil;
+    NSError *error = [[NSError alloc] init];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+    
+    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response Code: %d", [urlResponse statusCode]);
+    
+    if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
+    {
+        NSLog(@"Token: %@", result);
+    }
+     */
+    
+
 }
 
 

@@ -10,4 +10,7 @@
 
 @interface Skills : NSObject
 
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *id_num;
+
 @end

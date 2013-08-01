@@ -7,6 +7,8 @@
 //
 
 #import "TUSkillsListViewController.h"
+#import "Skills.h"
+#import "TUQuestionsViewController.h"
 
 @interface TUSkillsListViewController ()
 
@@ -23,6 +25,14 @@
     return self;
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    self.navigationController.navigationBar.topItem.hidesBackButton = YES;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -32,6 +42,47 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.skillsListTableView.delegate = self;
+    self.skillsListTableView.dataSource = self;
+    
+    if (!self.availableSkills){
+        self.availableSkills = [[NSMutableArray alloc] init];
+    }
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/skills.json"]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                       timeoutInterval:10];
+    [request setHTTPMethod: @"GET"];
+    
+    NSError *requestError;
+    NSURLResponse *urlResponse = nil;
+    //get response
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+    // NSString *result = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    // NSLog(@"Response: %@", result);
+    
+    NSError *jsonParsingError = nil;
+    NSArray *skillSet = [NSJSONSerialization JSONObjectWithData:response options:0 error:&jsonParsingError];
+    NSDictionary *skills;
+    NSString *categoryString;
+    for (int i = 0; i <[skillSet count]; i++) {
+        skills = [skillSet objectAtIndex:i];
+        categoryString=[[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"assessment"];
+        
+        if (![categoryString isEqual:[NSNull null]]) {
+            //NSLog(@"%@", categoryString);
+            NSString *testName = [[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"name"];
+            NSLog(@"NAME %@", testName);
+            
+            
+            [self.availableSkills addObject:testName];
+        }
+        
+    }
+    NSLog(@"%@", self.availableSkills);
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,27 +95,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.availableSkills.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+     */
     // Configure the cell...
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    
+    //since our passwords array contains a list of QCAccount Objects we can index into our array and set the value equal to a local variable we will call account.
+    Skills *skill_set =[self.availableSkills objectAtIndex:indexPath.row];
+    
+    //cell.textLabel.text = skill_set.name;
+        
     
     return cell;
 }
@@ -113,12 +171,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+     TUQuestionsViewController *questionsVC = [[TUQuestionsViewController alloc] initWithNibName:nil bundle:nil];
      // ...
      // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+     [self.navigationController pushViewController:questionsVC animated:YES];
+    
 }
 
 @end
