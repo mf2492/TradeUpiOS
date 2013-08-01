@@ -71,7 +71,6 @@
 }
 
 -(void)userSignUp:(NSString *)name withEmail:(NSString *)email withPassword:(NSString *)password withConfirmation:(NSString *)confirm {
-    //http://localhost:3000/users.json?name=jonton&email=hi@tra22deup.io&password=wowzers&password_confirmation=wowzers&role_ids=2
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/users.json"]];
     [request setHTTPMethod:@"POST"];

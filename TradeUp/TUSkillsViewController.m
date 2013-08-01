@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.navigationItem.hidesBackButton = YES;
     }
     return self;
 }
@@ -27,6 +28,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/skills.json"]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                       timeoutInterval:10];
+    
+    [request setHTTPMethod: @"GET"];
+    
+    NSError *requestError;
+    NSURLResponse *urlResponse = nil;
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+    NSString *result = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    NSLog(@"Response: %@", result);
+    
 }
 
 - (void)didReceiveMemoryWarning

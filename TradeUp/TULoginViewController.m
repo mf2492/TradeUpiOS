@@ -8,6 +8,7 @@
 
 #import "TULoginViewController.h"
 #import "TUSignUpViewController.h"
+#import "TUSkillsViewController.h"
 
 @interface TULoginViewController ()
 
@@ -112,6 +113,9 @@
     if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
     {
         NSLog(@"Response: %@", result);
+        TUSkillsViewController *skillsVC = [[TUSkillsViewController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:skillsVC animated:YES];
+
     } else {
         self.credentials.hidden = NO;
     }
