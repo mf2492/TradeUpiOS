@@ -13,4 +13,6 @@
     TULoginViewController *token;
 }
 
+@property (strong, nonatomic) NSString *auth_token_question;
+
 @end

@@ -41,9 +41,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSLog(@"AUTHL %@", self.auth_token_question);
+/*
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/api/v1/assessments/:assessment-name.json"]];
     [request setHTTPMethod:@"POST"];
-    /*
+    
     NSString *post = [NSString stringWithFormat:@"auth_token=%@", ]];
     NSLog(@"POST: %@",post);
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];

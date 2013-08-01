@@ -10,6 +10,7 @@
 #import "TUSignUpViewController.h"
 #import "TUSkillsListViewController.h"
 
+
 @interface TULoginViewController ()
 
 @end
@@ -123,9 +124,9 @@
         
         NSString* userToken = [json objectForKey:@"token"]; //2
         [self postToken:userToken];
-
         
         TUSkillsListViewController *skillsVC = [[TUSkillsListViewController alloc] initWithNibName:nil bundle:nil];
+        skillsVC.auth_token = userToken;
         [self.navigationController pushViewController:skillsVC animated:YES];
 
     } else {

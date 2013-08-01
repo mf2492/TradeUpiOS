@@ -162,9 +162,10 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
-     TUQuestionsViewController *questionsVC = [[TUQuestionsViewController alloc] initWithNibName:nil bundle:nil];
-     [self.navigationController pushViewController:questionsVC animated:YES];
+{
+    TUQuestionsViewController *questionsVC = [[TUQuestionsViewController alloc] initWithNibName:nil bundle:nil];
+    questionsVC.auth_token_question = self.auth_token;
+    [self.navigationController pushViewController:questionsVC animated:YES];
     
 }
 
