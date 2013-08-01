@@ -60,11 +60,50 @@
     NSString *confirm = self.confirmPasswordTextField.text;
     
     NSLog(@"%@\n%@\n%@\n%@", name, email, password, confirm);
-    [self passwordConfirmed:password with:confirm];
+    if ([name length] > 0 && [email length] > 0) {
+        if([self passwordConfirmed:password with:confirm]) {
+            [self userSignUp:name withEmail:email withPassword:password withConfirmation:confirm];
+        };
+    } else {
+        self.passwordMatch.text = @"All fields required.";
+        self.passwordMatch.hidden = NO;
+    }
 }
 
+-(void)userSignUp:(NSString *)name withEmail:(NSString *)email withPassword:(NSString *)password withConfirmation:(NSString *)confirm {
+    //http://localhost:3000/users.json?name=jonton&email=hi@tra22deup.io&password=wowzers&password_confirmation=wowzers&role_ids=2
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://tradeup-staging.herokuapp.com/users.json"]];
+    [request setHTTPMethod:@"POST"];
+    NSString *post = [NSString stringWithFormat:@"name=%@&email=%@&password=%@&password_confirmation=%@&role_ids=2", name, email, password, confirm];
+    NSLog(@"POST: %@",post);
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    
+    //get response
+    NSHTTPURLResponse* urlResponse = nil;
+    NSError *error = [[NSError alloc] init];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response Code: %d", [urlResponse statusCode]);
+    
+    if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
+    {
+        NSLog(@"Response: %@", result);
+        //ADD CODE TO GO TO SKILLS
+    }
+    
+
+}
+
+
+
 - (BOOL) passwordConfirmed:(NSString *)first with:(NSString *)second {
-    if ([first isEqualToString:second]) {
+    if ([first isEqualToString:second] && [self.passwordTextField.text length] > 0) {
         NSLog(@"YES");
         self.passwordMatch.hidden = YES;
         return YES;
@@ -72,6 +111,8 @@
     } else {
         NSLog(@"NO");
         self.passwordMatch.hidden = NO;
+        
+        //Highlights password textfield if incorrect
         self.passwordTextField.layer.borderColor=[[UIColor colorWithRed:199.0f/255.0f green:68.0f/255.0f blue:48.0f/255.0f alpha:1.0] CGColor];
         self.passwordTextField.layer.borderWidth=2.0;
         self.passwordTextField.layer.cornerRadius = 8;
