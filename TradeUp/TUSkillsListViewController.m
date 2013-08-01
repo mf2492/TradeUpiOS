@@ -36,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@"banner"] forBarMetrics:UIBarMetricsDefault];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -107,22 +109,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-     */
-    // Configure the cell...
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     
-    //since our passwords array contains a list of QCAccount Objects we can index into our array and set the value equal to a local variable we will call account.
     Skills *skill_set =[self.availableSkills objectAtIndex:indexPath.row];
     
     cell.textLabel.text = skill_set.name;
-        
     
     return cell;
 }
@@ -171,12 +162,8 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    
+{    
      TUQuestionsViewController *questionsVC = [[TUQuestionsViewController alloc] initWithNibName:nil bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:questionsVC animated:YES];
     
 }
