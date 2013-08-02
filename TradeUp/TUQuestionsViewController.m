@@ -48,6 +48,7 @@
     
     NSString *url = [[[@"http://tradeup-staging.herokuapp.com/api/v1/assessments/" stringByAppendingString:self.testName] stringByAppendingString:@".json?auth_token="] stringByAppendingString:self.auth_token_question];
     
+    
     NSLog(@"URL: %@", url);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
@@ -90,8 +91,33 @@
     [self.answer3 setTitle:answer3 forState:UIControlStateNormal];
     [self.answer4 setTitle:answer4 forState:UIControlStateNormal];
 
+    self.answer1.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.answer2.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.answer3.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.answer4.titleLabel.adjustsFontSizeToFitWidth = YES;
+    
+    
+    //GET IDS
+    self.idList = [skillSet valueForKeyPath:@"question.answers.answer.id"];
+    NSLog(@"ID: %@", self.idList);
+    
 
     
+    //GET CORRECT OPTIONS
+    self.correctBool = [skillSet valueForKeyPath:@"question.answers.answer.is_correct"]; 
+    NSLog(@"CORRECT?: %@", self.correctBool);
+    for (int i = 0; i < self.correctBool.count; i++) {
+        if ([[self.correctBool objectAtIndex:i] integerValue] == 1) {
+            NSLog(@"CORRECT CHOICE: %d", i);
+            self.correctChoice = i;
+        }
+    }
+    
+    //if (userChoice == correctChoice) {
+        
+    
+
+
     
 }
 
@@ -101,6 +127,38 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)answer1pressed:(UIButton *)sender {
+    self.userChoice = 0;
+    if (self.userChoice == self.correctChoice) {
+        NSLog(@"CORRECT");
+    } else
+        NSLog(@"WRONG");
+}
+
+- (IBAction)answer2pressed:(UIButton *)sender {
+    self.userChoice = 1;
+    if (self.userChoice == self.correctChoice) {
+        NSLog(@"CORRECT");
+    } else
+        NSLog(@"WRONG");
+}
+
+- (IBAction)answer3pressed:(UIButton *)sender {
+    self.userChoice = 2;
+    if (self.userChoice == self.correctChoice) {
+        NSLog(@"CORRECT");
+    } else
+        NSLog(@"WRONG");
+}
+
+- (IBAction)answer4pressed:(UIButton *)sender {
+    self.userChoice = 3;
+    if (self.userChoice == self.correctChoice) {
+        NSLog(@"CORRECT");
+    } else
+        NSLog(@"WRONG");
 }
 
 @end

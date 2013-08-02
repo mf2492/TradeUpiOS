@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5ACA9B17AC3EFF00EBF98D /* TUAnswersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5ACA9917AC3EFF00EBF98D /* TUAnswersViewController.m */; };
+		0A5ACA9C17AC3EFF00EBF98D /* TUAnswersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5ACA9A17AC3EFF00EBF98D /* TUAnswersViewController.xib */; };
 		0A7EB92A17A9A58F0036D8C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92917A9A58F0036D8C7 /* UIKit.framework */; };
 		0A7EB92C17A9A58F0036D8C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */; };
 		0A7EB92E17A9A58F0036D8C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92D17A9A58F0036D8C7 /* CoreGraphics.framework */; };
@@ -38,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5ACA9817AC3EFF00EBF98D /* TUAnswersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUAnswersViewController.h; sourceTree = "<group>"; };
+		0A5ACA9917AC3EFF00EBF98D /* TUAnswersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUAnswersViewController.m; sourceTree = "<group>"; };
+		0A5ACA9A17AC3EFF00EBF98D /* TUAnswersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUAnswersViewController.xib; sourceTree = "<group>"; };
 		0A7EB92617A9A58F0036D8C7 /* TradeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7EB92917A9A58F0036D8C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5ACA9717AC3EE700EBF98D /* Answers */ = {
+			isa = PBXGroup;
+			children = (
+				0A5ACA9817AC3EFF00EBF98D /* TUAnswersViewController.h */,
+				0A5ACA9917AC3EFF00EBF98D /* TUAnswersViewController.m */,
+				0A5ACA9A17AC3EFF00EBF98D /* TUAnswersViewController.xib */,
+			);
+			name = Answers;
+			sourceTree = "<group>";
+		};
 		0A7EB91D17A9A58E0036D8C7 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +144,7 @@
 				0A7EB97617AA08400036D8C7 /* Login */,
 				0A7EB96F17A9BEB30036D8C7 /* Skills */,
 				0A7EB97017A9BEBB0036D8C7 /* Questions */,
+				0A5ACA9717AC3EE700EBF98D /* Answers */,
 				0A7EB98E17AAD6500036D8C7 /* Models */,
 				0A7EB93017A9A58F0036D8C7 /* Supporting Files */,
 			);
@@ -285,6 +301,7 @@
 				0A7EB99C17AAE45D0036D8C7 /* banner@2x.png in Resources */,
 				0A7EB99F17AAE7170036D8C7 /* backButton.png in Resources */,
 				0A7EB9A017AAE7170036D8C7 /* backButton@2x.png in Resources */,
+				0A5ACA9C17AC3EFF00EBF98D /* TUAnswersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +320,7 @@
 				0A7EB99117AAD6B50036D8C7 /* Skills.m in Sources */,
 				0A7EB99517AAD7E50036D8C7 /* TUQuestionsViewController.m in Sources */,
 				0A7EB9A717AB133F0036D8C7 /* Question.m in Sources */,
+				0A5ACA9B17AC3EFF00EBF98D /* TUAnswersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +441,7 @@
 				0A7EB94B17A9A5900036D8C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
