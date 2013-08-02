@@ -17,5 +17,14 @@
 @property (strong, nonatomic) NSString *testName;
 
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
+@property (strong, nonatomic) NSMutableArray *answerList;
+
+@property (strong, nonatomic) IBOutlet UIButton *answer1;
+@property (strong, nonatomic) IBOutlet UIButton *answer2;
+@property (strong, nonatomic) IBOutlet UIButton *answer3;
+@property (strong, nonatomic) IBOutlet UIButton *answer4;
+
+
+
 
 @end

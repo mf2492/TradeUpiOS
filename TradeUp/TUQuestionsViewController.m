@@ -69,7 +69,7 @@
     
     
     //GET CURRENT QUESTION
-    NSString *currentQuestion = [[skillSet valueForKeyPath:@"question"] objectForKey:@"prompt"];
+    NSString *currentQuestion = [skillSet valueForKeyPath:@"question.prompt"];
     NSLog(@"QUESTION: %@", currentQuestion);
     Question *newQuestion = [[Question alloc]init];
     newQuestion.prompt = currentQuestion;
@@ -78,8 +78,17 @@
     
     
     //GET ANSWER OPTIONS
-    NSString *answer1 = [[skillSet valueForKeyPath:@"answers"] objectForKey:@"answer"];
-    NSLog(@"ANSWER: %@", answer1);
+    self.answerList = [skillSet valueForKeyPath:@"question.answers.answer.answer_text"];
+    NSLog(@"ANSWER: %@", self.answerList);
+    NSString *answer1 = self.answerList[0];
+    NSString *answer2 = self.answerList[1];
+    NSString *answer3 = self.answerList[2];
+    NSString *answer4 = self.answerList[3];
+    
+    [self.answer1 setTitle:answer1 forState:UIControlStateNormal];
+    [self.answer2 setTitle:answer2 forState:UIControlStateNormal];
+    [self.answer3 setTitle:answer3 forState:UIControlStateNormal];
+    [self.answer4 setTitle:answer4 forState:UIControlStateNormal];
 
 
     
