@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSString *auth_token_question;
 @property (strong, nonatomic) NSString *testName;
 
+@property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 
 @end

@@ -69,6 +69,7 @@
     for (int i = 0; i <[skillSet count]; i++) {
         skills = [skillSet objectAtIndex:i];
         NSString *categoryString=[[skillSet valueForKeyPath:@"skill"][i] objectForKey:@"assessment"];
+        //print out
         
         if (![categoryString isEqual:[NSNull null]]) {
             //NSLog(@"%@", categoryString);

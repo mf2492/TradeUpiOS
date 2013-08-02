@@ -7,6 +7,7 @@
 //
 
 #import "TUQuestionsViewController.h"
+#import "Question.h"
 
 @interface TUQuestionsViewController ()
 
@@ -64,8 +65,24 @@
     NSError *jsonParsingError = nil;
     NSArray *skillSet = [NSJSONSerialization JSONObjectWithData:response options:0 error:&jsonParsingError];
     //NSDictionary *skills = [skillSet objectAtIndex:0];
-    NSString *categoryString=[[skillSet valueForKeyPath:@"question"] objectForKey:@"prompt"];
-    NSLog(@"QUESTION: %@", categoryString);
+    
+    
+    
+    //GET CURRENT QUESTION
+    NSString *currentQuestion = [[skillSet valueForKeyPath:@"question"] objectForKey:@"prompt"];
+    NSLog(@"QUESTION: %@", currentQuestion);
+    Question *newQuestion = [[Question alloc]init];
+    newQuestion.prompt = currentQuestion;
+    self.questionLabel.text = newQuestion.prompt;
+    //get question id
+    
+    
+    //GET ANSWER OPTIONS
+    NSString *answer1 = [[skillSet valueForKeyPath:@"answers"] objectForKey:@"answer"];
+    NSLog(@"ANSWER: %@", answer1);
+
+
+    
     
 }
 
