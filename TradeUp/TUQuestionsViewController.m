@@ -58,8 +58,14 @@
     NSURLResponse *urlResponse = nil;
     //get response
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
-    NSString *result = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-    NSLog(@"Response: %@", result);
+    // NSString *result = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    // NSLog(@"Response: %@", result);
+    
+    NSError *jsonParsingError = nil;
+    NSArray *skillSet = [NSJSONSerialization JSONObjectWithData:response options:0 error:&jsonParsingError];
+    //NSDictionary *skills = [skillSet objectAtIndex:0];
+    NSString *categoryString=[[skillSet valueForKeyPath:@"question"] objectForKey:@"prompt"];
+    NSLog(@"QUESTION: %@", categoryString);
     
 }
 
