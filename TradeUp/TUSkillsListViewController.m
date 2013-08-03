@@ -8,7 +8,7 @@
 
 #import "TUSkillsListViewController.h"
 #import "Skills.h"
-#import "TUQuestionsViewController.h"
+#import "TUInitialQuestionsViewController.h"
 
 @interface TUSkillsListViewController ()
 
@@ -172,7 +172,8 @@
 {
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = selectedCell.textLabel.text;    
-    TUQuestionsViewController *questionsVC = [[TUQuestionsViewController alloc] initWithNibName:nil bundle:nil];
+    TUInitialQuestionsViewController *questionsVC = [[TUInitialQuestionsViewController alloc] initWithNibName:nil bundle:nil];
+    
     questionsVC.auth_token_question = self.auth_token;
     questionsVC.testName = cellText;
     [self.navigationController pushViewController:questionsVC animated:YES];

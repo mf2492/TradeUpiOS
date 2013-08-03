@@ -1,5 +1,5 @@
 //
-//  TUQuestionsViewController.h
+//  TUInitialQuestionsViewController.h
 //  TradeUp
 //
 //  Created by Michelle Austria on 8/1/13.
@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TULoginViewController.h"
 
-@interface TUQuestionsViewController : UIViewController {
-    TULoginViewController *token;
-}
+@interface TUInitialQuestionsViewController : UIViewController 
 
 @property (strong, nonatomic) NSString *auth_token_question;
 @property (strong, nonatomic) NSString *testName;
@@ -22,6 +20,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *answer2;
 @property (strong, nonatomic) IBOutlet UIButton *answer3;
 @property (strong, nonatomic) IBOutlet UIButton *answer4;
+
+@property (strong, nonatomic) NSString *first;
+@property (strong, nonatomic) NSString *second;
+@property (strong, nonatomic) NSString *third;
+@property (strong, nonatomic) NSString *fourth;
 
 - (IBAction)answer1pressed:(UIButton *)sender;
 - (IBAction)answer2pressed:(UIButton *)sender;
@@ -35,6 +38,7 @@
 @property (nonatomic) int userChoice;
 @property (nonatomic) int correctChoice;
 
+- (void)checkAnswer:(int)user vs:(int)correct;
 
 
 @end

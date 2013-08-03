@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A5ACA9B17AC3EFF00EBF98D /* TUAnswersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5ACA9917AC3EFF00EBF98D /* TUAnswersViewController.m */; };
 		0A5ACA9C17AC3EFF00EBF98D /* TUAnswersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5ACA9A17AC3EFF00EBF98D /* TUAnswersViewController.xib */; };
+		0A5ACAA017AC4B9400EBF98D /* AuthTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5ACA9F17AC4B9300EBF98D /* AuthTest.m */; };
 		0A7EB92A17A9A58F0036D8C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92917A9A58F0036D8C7 /* UIKit.framework */; };
 		0A7EB92C17A9A58F0036D8C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */; };
 		0A7EB92E17A9A58F0036D8C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7EB92D17A9A58F0036D8C7 /* CoreGraphics.framework */; };
@@ -30,8 +31,8 @@
 		0A7EB98917AAD5050036D8C7 /* TUSkillsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB98717AAD5050036D8C7 /* TUSkillsListViewController.m */; };
 		0A7EB98A17AAD5050036D8C7 /* TUSkillsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB98817AAD5050036D8C7 /* TUSkillsListViewController.xib */; };
 		0A7EB99117AAD6B50036D8C7 /* Skills.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB99017AAD6B50036D8C7 /* Skills.m */; };
-		0A7EB99517AAD7E50036D8C7 /* TUQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB99317AAD7E50036D8C7 /* TUQuestionsViewController.m */; };
-		0A7EB99617AAD7E50036D8C7 /* TUQuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB99417AAD7E50036D8C7 /* TUQuestionsViewController.xib */; };
+		0A7EB99517AAD7E50036D8C7 /* TUInitialQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB99317AAD7E50036D8C7 /* TUInitialQuestionsViewController.m */; };
+		0A7EB99617AAD7E50036D8C7 /* TUInitialQuestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB99417AAD7E50036D8C7 /* TUInitialQuestionsViewController.xib */; };
 		0A7EB99A17AAE2CC0036D8C7 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB99917AAE2CC0036D8C7 /* banner.png */; };
 		0A7EB99C17AAE45D0036D8C7 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB99B17AAE45D0036D8C7 /* banner@2x.png */; };
 		0A7EB99F17AAE7170036D8C7 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7EB99D17AAE7170036D8C7 /* backButton.png */; };
@@ -43,6 +44,8 @@
 		0A5ACA9817AC3EFF00EBF98D /* TUAnswersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUAnswersViewController.h; sourceTree = "<group>"; };
 		0A5ACA9917AC3EFF00EBF98D /* TUAnswersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUAnswersViewController.m; sourceTree = "<group>"; };
 		0A5ACA9A17AC3EFF00EBF98D /* TUAnswersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUAnswersViewController.xib; sourceTree = "<group>"; };
+		0A5ACA9E17AC4B9300EBF98D /* AuthTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthTest.h; sourceTree = "<group>"; };
+		0A5ACA9F17AC4B9300EBF98D /* AuthTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthTest.m; sourceTree = "<group>"; };
 		0A7EB92617A9A58F0036D8C7 /* TradeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7EB92917A9A58F0036D8C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A7EB92B17A9A58F0036D8C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,9 +75,9 @@
 		0A7EB98817AAD5050036D8C7 /* TUSkillsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUSkillsListViewController.xib; sourceTree = "<group>"; };
 		0A7EB98F17AAD6B50036D8C7 /* Skills.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skills.h; path = ../Skills.h; sourceTree = "<group>"; };
 		0A7EB99017AAD6B50036D8C7 /* Skills.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Skills.m; path = ../Skills.m; sourceTree = "<group>"; };
-		0A7EB99217AAD7E50036D8C7 /* TUQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUQuestionsViewController.h; sourceTree = "<group>"; };
-		0A7EB99317AAD7E50036D8C7 /* TUQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUQuestionsViewController.m; sourceTree = "<group>"; };
-		0A7EB99417AAD7E50036D8C7 /* TUQuestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUQuestionsViewController.xib; sourceTree = "<group>"; };
+		0A7EB99217AAD7E50036D8C7 /* TUInitialQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUInitialQuestionsViewController.h; sourceTree = "<group>"; };
+		0A7EB99317AAD7E50036D8C7 /* TUInitialQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUInitialQuestionsViewController.m; sourceTree = "<group>"; };
+		0A7EB99417AAD7E50036D8C7 /* TUInitialQuestionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUInitialQuestionsViewController.xib; sourceTree = "<group>"; };
 		0A7EB99917AAE2CC0036D8C7 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
 		0A7EB99B17AAE45D0036D8C7 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
 		0A7EB99D17AAE7170036D8C7 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
@@ -201,9 +204,9 @@
 		0A7EB97017A9BEBB0036D8C7 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				0A7EB99217AAD7E50036D8C7 /* TUQuestionsViewController.h */,
-				0A7EB99317AAD7E50036D8C7 /* TUQuestionsViewController.m */,
-				0A7EB99417AAD7E50036D8C7 /* TUQuestionsViewController.xib */,
+				0A7EB99217AAD7E50036D8C7 /* TUInitialQuestionsViewController.h */,
+				0A7EB99317AAD7E50036D8C7 /* TUInitialQuestionsViewController.m */,
+				0A7EB99417AAD7E50036D8C7 /* TUInitialQuestionsViewController.xib */,
 			);
 			name = Questions;
 			sourceTree = "<group>";
@@ -228,6 +231,8 @@
 				0A7EB99017AAD6B50036D8C7 /* Skills.m */,
 				0A7EB9A517AB133D0036D8C7 /* Question.h */,
 				0A7EB9A617AB133E0036D8C7 /* Question.m */,
+				0A5ACA9E17AC4B9300EBF98D /* AuthTest.h */,
+				0A5ACA9F17AC4B9300EBF98D /* AuthTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -296,7 +301,7 @@
 				0A7EB96E17A9B7140036D8C7 /* logo.png in Resources */,
 				0A7EB97517A9E58B0036D8C7 /* TUSignUpViewController.xib in Resources */,
 				0A7EB98A17AAD5050036D8C7 /* TUSkillsListViewController.xib in Resources */,
-				0A7EB99617AAD7E50036D8C7 /* TUQuestionsViewController.xib in Resources */,
+				0A7EB99617AAD7E50036D8C7 /* TUInitialQuestionsViewController.xib in Resources */,
 				0A7EB99A17AAE2CC0036D8C7 /* banner.png in Resources */,
 				0A7EB99C17AAE45D0036D8C7 /* banner@2x.png in Resources */,
 				0A7EB99F17AAE7170036D8C7 /* backButton.png in Resources */,
@@ -318,9 +323,10 @@
 				0A7EB97417A9E58B0036D8C7 /* TUSignUpViewController.m in Sources */,
 				0A7EB98917AAD5050036D8C7 /* TUSkillsListViewController.m in Sources */,
 				0A7EB99117AAD6B50036D8C7 /* Skills.m in Sources */,
-				0A7EB99517AAD7E50036D8C7 /* TUQuestionsViewController.m in Sources */,
+				0A7EB99517AAD7E50036D8C7 /* TUInitialQuestionsViewController.m in Sources */,
 				0A7EB9A717AB133F0036D8C7 /* Question.m in Sources */,
 				0A5ACA9B17AC3EFF00EBF98D /* TUAnswersViewController.m in Sources */,
+				0A5ACAA017AC4B9400EBF98D /* AuthTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

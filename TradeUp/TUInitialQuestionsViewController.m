@@ -1,19 +1,20 @@
 //
-//  TUQuestionsViewController.m
+//  TUInitialQuestionsViewController.m
 //  TradeUp
 //
 //  Created by Michelle Austria on 8/1/13.
 //  Copyright (c) 2013 Michelle Austria. All rights reserved.
 //
 
-#import "TUQuestionsViewController.h"
+#import "TUInitialQuestionsViewController.h"
 #import "Question.h"
+#import "TUAnswersViewController.h"
 
-@interface TUQuestionsViewController ()
+@interface TUInitialQuestionsViewController ()
 
 @end
 
-@implementation TUQuestionsViewController
+@implementation TUInitialQuestionsViewController
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,7 +43,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+   
     NSLog(@"AUTHL %@", self.auth_token_question);
     NSLog(@"NAME: %@", self.testName);
     
@@ -50,6 +51,7 @@
     
     
     NSLog(@"URL: %@", url);
+    
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
@@ -112,12 +114,25 @@
             self.correctChoice = i;
         }
     }
-    
-    //if (userChoice == correctChoice) {
-        
-    
+}
 
 
+-(void)checkAnswer:(int)user vs:(int)correct {
+    TUAnswersViewController *answersVC = [[TUAnswersViewController alloc] initWithNibName:nil bundle:nil];
+    
+    if (self.userChoice == self.correctChoice) {
+        answersVC.isCorrect = YES;
+    } else{
+        answersVC.isCorrect = NO;
+    }
+    
+    answersVC.auth = self.auth_token_question;
+    answersVC.testName = self.testName;
+    answersVC.answer1 = self.answer1.titleLabel;
+    
+    
+    
+    [self.navigationController pushViewController:answersVC animated:NO];
     
 }
 
@@ -131,34 +146,27 @@
 
 - (IBAction)answer1pressed:(UIButton *)sender {
     self.userChoice = 0;
-    if (self.userChoice == self.correctChoice) {
-        NSLog(@"CORRECT");
-    } else
-        NSLog(@"WRONG");
+    [self checkAnswer:self.userChoice vs:self.correctChoice];
 }
 
 - (IBAction)answer2pressed:(UIButton *)sender {
     self.userChoice = 1;
-    if (self.userChoice == self.correctChoice) {
-        NSLog(@"CORRECT");
-    } else
-        NSLog(@"WRONG");
+    [self checkAnswer:self.userChoice vs:self.correctChoice];
+
 }
 
 - (IBAction)answer3pressed:(UIButton *)sender {
     self.userChoice = 2;
-    if (self.userChoice == self.correctChoice) {
-        NSLog(@"CORRECT");
-    } else
-        NSLog(@"WRONG");
+    [self checkAnswer:self.userChoice vs:self.correctChoice];
+
 }
 
 - (IBAction)answer4pressed:(UIButton *)sender {
     self.userChoice = 3;
-    if (self.userChoice == self.correctChoice) {
-        NSLog(@"CORRECT");
-    } else
-        NSLog(@"WRONG");
+    [self checkAnswer:self.userChoice vs:self.correctChoice];
 }
+
+
+
 
 @end
